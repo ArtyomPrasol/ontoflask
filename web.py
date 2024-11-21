@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def inGraph(query):
     g = Graph()
-    g.parse("C:/Work/Model/neurov.owl", format="xml")
+    g.parse("/app/neurov.owl", format="xml")
 
     querys = """
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -240,4 +240,4 @@ def ask_query():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
