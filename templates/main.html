@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+function sendQuery(event) {
+    event.preventDefault(); // Останавливаем стандартное поведение формы
+    const modelName = document.getElementById("model_name").value;
+
+    fetch("/ask", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ model_name: modelName })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Показываем всплывающее меню с результатом
+        const message = data.is_present
+            ? `"${modelName}" существует.`
+            : `"${modelName}" не существует.`;
+        alert(message); // Используем alert() для простоты
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Ошибка.");
+    });
+}
+    </script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h2 {
+    margin: 10px 0;
+}
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #087f23;
+}
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+.link-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.link-list li:last-child {
+    border-bottom: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+form label {
+    font-weight: bold;
+}
+form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+form button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #087f23;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlaskApp</title>
+</head>
+<body>
+    <h1>Запросы:</h1>
+    <div class="container">
+        <ul class="link-list">
+            <li><h2><a href="/v1">v1</a></h2></li>
+            <li><h2><a href="/v2">v2</a></h2></li>
+            <li><h2><a href="/v3">v3</a></h2></li>
+            <li><h2><a href="/v4">v4</a></h2></li>
+            <li><h2><a href="/v5">v5</a></h2></li>
+            <li><h2><a href="/v6">v6</a></h2></li>
+            <li><h2><a href="/v7">v7</a></h2></li>
+            <li><h2><a href="/v8">v8</a></h2></li>
+            <li><h2><a href="/v9">v9</a></h2></li>
+            <li><h2><a href="/v10">v10</a></h2></li>
+            <li>
+                <form onsubmit="sendQuery(event)">
+                    <label for="model_name">Введите название модели:</label>
+                    <input type="text" id="model_name" name="model_name" required>
+                    <button type="submit">Имеется?</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

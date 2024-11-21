@@ -1,0 +1,921 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY db "http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5" >
+    <!ENTITY untitled-ontology-5 "http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-5="&db;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:db="http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5">
+    <Ontology rdf:about="http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#HistoryHasModel -->
+
+    <ObjectProperty rdf:about="&db;#HistoryHasModel">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#HistoryModel"/>
+        <rdfs:range rdf:resource="&db;#Model"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#IterHasModel -->
+
+    <ObjectProperty rdf:about="&db;#IterHasModel">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#IterLearn"/>
+        <rdfs:range rdf:resource="&db;#Model"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#NeuroHasModel -->
+
+    <ObjectProperty rdf:about="&db;#NeuroHasModel">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="&db;#Model"/>
+        <rdfs:domain rdf:resource="&db;#Neuro"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#TaskHasModel -->
+
+    <ObjectProperty rdf:about="&db;#TaskHasModel">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="&db;#Model"/>
+        <rdfs:domain rdf:resource="&db;#Task"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasHistory -->
+
+    <ObjectProperty rdf:about="&db;#hasHistory">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="&db;#HistoryModel"/>
+        <rdfs:domain rdf:resource="&db;#Model"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasIter -->
+
+    <ObjectProperty rdf:about="&db;#hasIter">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="&db;#IterLearn"/>
+        <rdfs:domain rdf:resource="&db;#Model"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasNeuro -->
+
+    <ObjectProperty rdf:about="&db;#hasNeuro">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&db;#Neuro"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasObjects -->
+
+    <ObjectProperty rdf:about="&db;#hasObjects">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#IterLearn"/>
+        <rdfs:range rdf:resource="&db;#ObjectForLearn"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasTask -->
+
+    <ObjectProperty rdf:about="&db;#hasTask">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&db;#Task"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#hasType -->
+
+    <ObjectProperty rdf:about="&db;#hasType">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&db;#ObjectForLearn"/>
+        <rdfs:range rdf:resource="&db;#ObjectType"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#count_layers -->
+
+    <DatatypeProperty rdf:about="&db;#count_layers">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#count_neurons -->
+
+    <DatatypeProperty rdf:about="&db;#count_neurons">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_history -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_history">
+        <rdfs:domain rdf:resource="&db;#HistoryModel"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_iter -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_iter">
+        <rdfs:domain rdf:resource="&db;#IterLearn"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_model -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_model">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_neuro -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_neuro">
+        <rdfs:domain rdf:resource="&db;#Neuro"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_object -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_object">
+        <rdfs:domain rdf:resource="&db;#ObjectForLearn"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_task -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_task">
+        <rdfs:domain rdf:resource="&db;#Task"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_create_type -->
+
+    <DatatypeProperty rdf:about="&db;#date_create_type">
+        <rdfs:domain rdf:resource="&db;#ObjectType"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_modif_neuro -->
+
+    <DatatypeProperty rdf:about="&db;#date_modif_neuro">
+        <rdfs:domain rdf:resource="&db;#Neuro"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_modif_task -->
+
+    <DatatypeProperty rdf:about="&db;#date_modif_task">
+        <rdfs:domain rdf:resource="&db;#Task"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#date_modif_type -->
+
+    <DatatypeProperty rdf:about="&db;#date_modif_type">
+        <rdfs:domain rdf:resource="&db;#ObjectType"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#description_neuro -->
+
+    <DatatypeProperty rdf:about="&db;#description_neuro">
+        <rdfs:domain rdf:resource="&db;#Neuro"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#description_task -->
+
+    <DatatypeProperty rdf:about="&db;#description_task">
+        <rdfs:domain rdf:resource="&db;#Task"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#file_path_history -->
+
+    <DatatypeProperty rdf:about="&db;#file_path_history">
+        <rdfs:domain rdf:resource="&db;#HistoryModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#file_path_model -->
+
+    <DatatypeProperty rdf:about="&db;#file_path_model">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#file_path_object -->
+
+    <DatatypeProperty rdf:about="&db;#file_path_object">
+        <rdfs:domain rdf:resource="&db;#ObjectForLearn"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#history_version -->
+
+    <DatatypeProperty rdf:about="&db;#history_version">
+        <rdfs:domain rdf:resource="&db;#HistoryModel"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_history -->
+
+    <DatatypeProperty rdf:about="&db;#name_history">
+        <rdfs:domain rdf:resource="&db;#HistoryModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_model -->
+
+    <DatatypeProperty rdf:about="&db;#name_model">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_neuro -->
+
+    <DatatypeProperty rdf:about="&db;#name_neuro">
+        <rdfs:domain rdf:resource="&db;#Neuro"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_object -->
+
+    <DatatypeProperty rdf:about="&db;#name_object">
+        <rdfs:domain rdf:resource="&db;#ObjectForLearn"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_task -->
+
+    <DatatypeProperty rdf:about="&db;#name_task">
+        <rdfs:domain rdf:resource="&db;#Task"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#name_type -->
+
+    <DatatypeProperty rdf:about="&db;#name_type">
+        <rdfs:domain rdf:resource="&db;#ObjectType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#version -->
+
+    <DatatypeProperty rdf:about="&db;#version">
+        <rdfs:domain rdf:resource="&db;#Model"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#HistoryModel -->
+
+    <Class rdf:about="&db;#HistoryModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#IterLearn -->
+
+    <Class rdf:about="&db;#IterLearn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#Model -->
+
+    <Class rdf:about="&db;#Model"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#Neuro -->
+
+    <Class rdf:about="&db;#Neuro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#ObjectForLearn -->
+
+    <Class rdf:about="&db;#ObjectForLearn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#ObjectType -->
+
+    <Class rdf:about="&db;#ObjectType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#Task -->
+
+    <Class rdf:about="&db;#Task"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#convolutional_neural_net -->
+
+    <NamedIndividual rdf:about="&db;#convolutional_neural_net">
+        <rdf:type rdf:resource="&db;#Neuro"/>
+        <untitled-ontology-5:description_neuro rdf:datatype="&xsd;string">Помогает в задачах с распознаванием образов</untitled-ontology-5:description_neuro>
+        <untitled-ontology-5:name_neuro rdf:datatype="&xsd;string">Сверточная нейронная сеть</untitled-ontology-5:name_neuro>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#feedforward_neural_net -->
+
+    <NamedIndividual rdf:about="&db;#feedforward_neural_net">
+        <rdf:type rdf:resource="&db;#Neuro"/>
+        <untitled-ontology-5:name_neuro rdf:datatype="&xsd;string">Нейронная сеть с прямой связью</untitled-ontology-5:name_neuro>
+        <untitled-ontology-5:description_neuro rdf:datatype="&xsd;string">Помогает решать базовые задачи классификации</untitled-ontology-5:description_neuro>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_audio -->
+
+    <NamedIndividual rdf:about="&db;#id_audio">
+        <rdf:type rdf:resource="&db;#ObjectType"/>
+        <untitled-ontology-5:name_type rdf:datatype="&xsd;string">Audio</untitled-ontology-5:name_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history1 -->
+
+    <NamedIndividual rdf:about="&db;#id_history1">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">1</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель1</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history2 -->
+
+    <NamedIndividual rdf:about="&db;#id_history2">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">1</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель2</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history3 -->
+
+    <NamedIndividual rdf:about="&db;#id_history3">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">1</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель3</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history4 -->
+
+    <NamedIndividual rdf:about="&db;#id_history4">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">2</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель1</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history5 -->
+
+    <NamedIndividual rdf:about="&db;#id_history5">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">2</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель2</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history6 -->
+
+    <NamedIndividual rdf:about="&db;#id_history6">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:history_version rdf:datatype="&xsd;integer">2</untitled-ontology-5:history_version>
+        <untitled-ontology-5:date_create_history rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_history>
+        <untitled-ontology-5:file_path_history rdf:datatype="&xsd;string">filesys\prev\</untitled-ontology-5:file_path_history>
+        <untitled-ontology-5:name_history rdf:datatype="&xsd;string">Модель3</untitled-ontology-5:name_history>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_history7 -->
+
+    <NamedIndividual rdf:about="&db;#id_history7">
+        <rdf:type rdf:resource="&db;#HistoryModel"/>
+        <untitled-ontology-5:HistoryHasModel rdf:resource="&db;#id_model3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter1 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter1">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter2 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter2">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model2"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter3 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter3">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model3"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj4"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter4 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter4">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj4"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj7"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter5 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter5">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model2"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj8"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj9"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter6 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter6">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model3"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj3"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj9"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter7 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter7">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter8 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter8">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model2"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj3"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj7"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_iter9 -->
+
+    <NamedIndividual rdf:about="&db;#id_iter9">
+        <rdf:type rdf:resource="&db;#IterLearn"/>
+        <untitled-ontology-5:date_create_iter rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_iter>
+        <untitled-ontology-5:IterHasModel rdf:resource="&db;#id_model3"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj1"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj5"/>
+        <untitled-ontology-5:hasObjects rdf:resource="&db;#id_obj9"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_model1 -->
+
+    <NamedIndividual rdf:about="&db;#id_model1">
+        <rdf:type rdf:resource="&db;#Model"/>
+        <untitled-ontology-5:count_neurons rdf:datatype="&xsd;integer">1024</untitled-ontology-5:count_neurons>
+        <untitled-ontology-5:date_create_model rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_model>
+        <untitled-ontology-5:version rdf:datatype="&xsd;integer">3</untitled-ontology-5:version>
+        <untitled-ontology-5:count_layers rdf:datatype="&xsd;integer">8</untitled-ontology-5:count_layers>
+        <untitled-ontology-5:file_path_model rdf:datatype="&xsd;string">filesys\now\</untitled-ontology-5:file_path_model>
+        <untitled-ontology-5:name_model rdf:datatype="&xsd;string">Модель1</untitled-ontology-5:name_model>
+        <untitled-ontology-5:hasNeuro rdf:resource="&db;#feedforward_neural_net"/>
+        <untitled-ontology-5:hasTask rdf:resource="&db;#id_task1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_model2 -->
+
+    <NamedIndividual rdf:about="&db;#id_model2">
+        <rdf:type rdf:resource="&db;#Model"/>
+        <untitled-ontology-5:count_layers rdf:datatype="&xsd;integer">12</untitled-ontology-5:count_layers>
+        <untitled-ontology-5:date_create_model rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_model>
+        <untitled-ontology-5:count_neurons rdf:datatype="&xsd;integer">2096</untitled-ontology-5:count_neurons>
+        <untitled-ontology-5:version rdf:datatype="&xsd;integer">3</untitled-ontology-5:version>
+        <untitled-ontology-5:file_path_model rdf:datatype="&xsd;string">filesys\now\</untitled-ontology-5:file_path_model>
+        <untitled-ontology-5:name_model rdf:datatype="&xsd;string">Модель2</untitled-ontology-5:name_model>
+        <untitled-ontology-5:hasNeuro rdf:resource="&db;#convolutional_neural_net"/>
+        <untitled-ontology-5:hasTask rdf:resource="&db;#id_task3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_model3 -->
+
+    <NamedIndividual rdf:about="&db;#id_model3">
+        <rdf:type rdf:resource="&db;#Model"/>
+        <untitled-ontology-5:count_layers rdf:datatype="&xsd;integer">10</untitled-ontology-5:count_layers>
+        <untitled-ontology-5:date_create_model rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_model>
+        <untitled-ontology-5:version rdf:datatype="&xsd;integer">3</untitled-ontology-5:version>
+        <untitled-ontology-5:count_neurons rdf:datatype="&xsd;integer">512</untitled-ontology-5:count_neurons>
+        <untitled-ontology-5:file_path_model rdf:datatype="&xsd;string">filesys\now\</untitled-ontology-5:file_path_model>
+        <untitled-ontology-5:name_model rdf:datatype="&xsd;string">Модель3</untitled-ontology-5:name_model>
+        <untitled-ontology-5:hasTask rdf:resource="&db;#id_task5"/>
+        <untitled-ontology-5:hasNeuro rdf:resource="&db;#recurrent_neural_net"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj1 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj1">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj1</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_audio"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj2 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj2">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj2</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_text"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj3 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj3">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj3</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_photo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj4 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj4">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj4</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_photo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj5 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj5">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj5</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_text"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj6 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj6">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj6</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_audio"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj7 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj7">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj7</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_audio"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj8 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj8">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj8</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_photo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_obj9 -->
+
+    <NamedIndividual rdf:about="&db;#id_obj9">
+        <rdf:type rdf:resource="&db;#ObjectForLearn"/>
+        <untitled-ontology-5:date_create_object rdf:datatype="&xsd;dateTime">2024-10-26T00:00:00</untitled-ontology-5:date_create_object>
+        <untitled-ontology-5:name_object rdf:datatype="&xsd;string">Obj9</untitled-ontology-5:name_object>
+        <untitled-ontology-5:file_path_object rdf:datatype="&xsd;string">filesys\obj\</untitled-ontology-5:file_path_object>
+        <untitled-ontology-5:hasType rdf:resource="&db;#id_text"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_photo -->
+
+    <NamedIndividual rdf:about="&db;#id_photo">
+        <rdf:type rdf:resource="&db;#ObjectType"/>
+        <untitled-ontology-5:name_type rdf:datatype="&xsd;string">Photo</untitled-ontology-5:name_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task1 -->
+
+    <NamedIndividual rdf:about="&db;#id_task1">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">TextWrite</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Генерация текста</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task2 -->
+
+    <NamedIndividual rdf:about="&db;#id_task2">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">ClassificationText</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Классификация текста</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task3 -->
+
+    <NamedIndividual rdf:about="&db;#id_task3">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-23T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">ClassificationImage</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Классификация изображения</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task4 -->
+
+    <NamedIndividual rdf:about="&db;#id_task4">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">ImgGen</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Генерация изображения</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task5 -->
+
+    <NamedIndividual rdf:about="&db;#id_task5">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-24T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-25T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">GenAudio</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Генерация аудио</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_task6 -->
+
+    <NamedIndividual rdf:about="&db;#id_task6">
+        <rdf:type rdf:resource="&db;#Task"/>
+        <untitled-ontology-5:date_create_task rdf:datatype="&xsd;dateTime">2024-10-22T00:00:00</untitled-ontology-5:date_create_task>
+        <untitled-ontology-5:date_modif_task rdf:datatype="&xsd;dateTime">2024-10-25T00:00:00</untitled-ontology-5:date_modif_task>
+        <untitled-ontology-5:name_task rdf:datatype="&xsd;string">ClassificationAudio</untitled-ontology-5:name_task>
+        <untitled-ontology-5:description_task rdf:datatype="&xsd;string">Классификация аудио</untitled-ontology-5:description_task>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#id_text -->
+
+    <NamedIndividual rdf:about="&db;#id_text">
+        <rdf:type rdf:resource="&db;#ObjectType"/>
+        <untitled-ontology-5:name_type rdf:datatype="&xsd;string">Text</untitled-ontology-5:name_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artyo/ontologies/2024/9/untitled-ontology-5#recurrent_neural_net -->
+
+    <NamedIndividual rdf:about="&db;#recurrent_neural_net">
+        <rdf:type rdf:resource="&db;#Neuro"/>
+        <untitled-ontology-5:description_neuro rdf:datatype="&xsd;string">Помогает решать задачи с предсказанием</untitled-ontology-5:description_neuro>
+        <untitled-ontology-5:name_neuro rdf:datatype="&xsd;string">Рекурентные нейронные сети</untitled-ontology-5:name_neuro>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
